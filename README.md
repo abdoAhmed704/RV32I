@@ -87,6 +87,12 @@ cd RV32I_Single_Cycle
 
 ```
 
+then you can open them using VS Code by doing this command:
+
+```bash
+code .
+```
+
 then add the files you want then:
 
 After editing files:
@@ -150,3 +156,4 @@ git push
 - Each member must work on a **branch with their own name**
 - Always `pull` before starting work
 - Always write a clear commit message
+
