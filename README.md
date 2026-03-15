@@ -44,7 +44,7 @@ cd RV32I
 
 ```bash
 git config --global user.email "your-email@example.com"
-git config --global user.name = "abdoAhmed704"
+git config --global user.name = "your_user_name"
 
 ```
 
