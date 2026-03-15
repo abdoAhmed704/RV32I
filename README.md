@@ -1,192 +1,147 @@
-هكتب لك **README.md كامل بالـ Markdown syntax** بحيث تحطه في الريبو مباشرة.
-الشرح بسيط لأي حد على **Windows** ومفيهوش تعقيد.
-
 ```markdown
 # RV32I
 
-This repository contains the implementation of the **RV32I processor project**.
-
-The goal of this repository is to allow all team members to collaborate on the project using Git and GitHub.
-
----
-
-# Contribution Rules
-
-To keep the project organized, every contributor **must create a branch using their own name**.
-
-Example:
-
-```
-
-git checkout -b abdulrahman
-git checkout -b mohamed
-git checkout -b sara
-
-```
-
-Do **NOT** push directly to the `main` branch.
-
-All work must be done in personal branches.
+This repository contains the implementation of the **RV32I Processor Project**.  
+All team members must follow the workflow below to collaborate correctly.
 
 ---
 
-# Requirements
+# Rules
 
-Before starting, install Git on your Windows machine.
+- Do **NOT** push directly to the `main` branch.
+- Every team member must create a **branch using their own name**.
+- All work must be done on personal branches.
+- Write clear commit messages describing your changes.
 
-Download Git from the official website:
+Example branch names:
+
+```
+
+abdulrahman
+mohamed
+sara
+
+````
+
+---
+
+# Step 1 — Install Git
+
+1. Download Git from the official website:
 
 https://git-scm.com/
 
-After installing, open **Git Bash**.
+2. Install Git using the default settings.
+
+3. After installation, open **Git Bash**.
 
 ---
 
-# 1. Clone the Repository
+# Step 2 — Clone the Repository
 
-First, clone the repository to your computer.
+Clone the repository to your computer:
 
-```
+```bash
+git clone https://github.com/YOUR_USERNAME/RV32I.git
+````
 
-git clone [https://github.com/YOUR\_USERNAME/RV32I.git](https://github.com/YOUR\_USERNAME/RV32I.git)
+Move into the project directory:
 
-```
-
-Then move into the project folder:
-
-```
-
+```bash
 cd RV32I
-
 ```
 
 ---
 
-# 2. Create Your Personal Branch
+# Step 3 — Create Your Branch
 
-Each team member must create a branch **with their own name**.
+Each contributor must create a branch **with their own name**.
 
 Example:
 
-```
-
+```bash
 git checkout -b your-name
-
 ```
 
 Example:
 
-```
-
+```bash
 git checkout -b abdulrahman
-
 ```
 
 ---
 
-# 3. Make Changes
+# Step 4 — Make Your Changes
 
-Now you can edit the files normally using any editor such as:
+Edit the project files using any editor such as:
 
-- VS Code
-- Notepad
-- Any IDE
+* Visual Studio Code
+* Notepad
+* Any IDE
 
 ---
 
-# 4. Add Your Changes
+# Step 5 — Add Changes
 
-After editing files, add them to Git:
+After editing files, stage them:
 
-```
-
+```bash
 git add .
-
 ```
 
 ---
 
-# 5. Commit Your Changes
+# Step 6 — Commit Changes
 
-Write a commit message describing your change:
+Commit your work with a descriptive message:
 
-```
-
-git commit -m "describe what you changed"
-
+```bash
+git commit -m "describe your changes"
 ```
 
 Example:
 
-```
-
+```bash
 git commit -m "added instruction decoder"
-
 ```
 
 ---
 
-# 6. Push Your Branch
+# Step 7 — Push Your Branch
 
 Upload your branch to GitHub:
 
-```
-
+```bash
 git push origin your-name
-
 ```
 
 Example:
 
-```
-
+```bash
 git push origin abdulrahman
-
 ```
 
 ---
 
-# 7. Pull Latest Changes
+# Step 8 — Pull Latest Updates
 
-Before starting new work, always pull the latest updates:
+Before starting new work, always pull the latest changes:
 
-```
-
+```bash
 git pull origin main
-
 ```
 
 ---
 
 # Recommended Workflow
 
-Every team member should follow this workflow:
-
 1. Clone the repository
-2. Create a personal branch
+2. Create your branch
 3. Make changes
 4. Add changes
-5. Commit
-6. Push branch
-7. Open a Pull Request
+5. Commit changes
+6. Push your branch
+7. Open a Pull Request on GitHub
 
----
-
-# Important Notes
-
-- Do **NOT** push directly to `main`
-- Always work on **your personal branch**
-- Use clear commit messages
-- Pull latest changes before starting work
 ```
-
----
-
-لو حابب، أقدر كمان أعمل لك نسخة **أقوى بكتير للـ README** فيها:
-
-* badges
-* project structure
-* folder explanation
-* contribution graph للفريق
-
-تخلي الريبو شكلها **احترافي جدًا قدام الدكتور**.
+```
