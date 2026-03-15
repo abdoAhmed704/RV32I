@@ -42,6 +42,14 @@ Then enter the project folder:
 cd RV32I
 ```
 
+```bash
+git config --global user.email "your-email@example.com"
+git config --global user.name = "abdoAhmed704"
+
+```
+
+
+
 ---
 
 # 3. Create Your Own Branch
