@@ -1,51 +1,42 @@
-```markdown
 # RV32I
 
-This repository contains the implementation of the **RV32I Processor Project**.  
-All team members must follow the workflow below to collaborate correctly.
+This repository is used for the Graduation Project.  
+Each team member must work on their **own branch named with their personal name**.
 
----
-
-# Rules
-
-- Do **NOT** push directly to the `main` branch.
-- Every team member must create a **branch using their own name**.
-- All work must be done on personal branches.
-- Write clear commit messages describing your changes.
-
-Example branch names:
-
+Example:
+```
+Abdelrahman Ahmed 
+Mahmoud Magdy
+Manar Mohammed
 ```
 
-abdulrahman
-mohamed
-sara
-
-````
+Never work directly on `main`.
 
 ---
 
-# Step 1 — Install Git
+# 1. Install Git (Windows)
 
-1. Download Git from the official website:
+1. Download Git from:
+   
+   https://git-scm.com/download/win
 
-https://git-scm.com/
+2. Run the installer.
 
-2. Install Git using the default settings.
+3. Keep clicking **Next** with default settings.
 
-3. After installation, open **Git Bash**.
+4. After installation open **Git Bash**.
 
 ---
 
-# Step 2 — Clone the Repository
+# 2. Clone the Repository
 
-Clone the repository to your computer:
+Open **Git Bash** and run:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/RV32I.git
-````
+git clone https://github.com/abdoAhmed704/RV32I
+```
 
-Move into the project directory:
+Then enter the project folder:
 
 ```bash
 cd RV32I
@@ -53,95 +44,109 @@ cd RV32I
 
 ---
 
-# Step 3 — Create Your Branch
+# 3. Create Your Own Branch
 
-Each contributor must create a branch **with their own name**.
-
-Example:
-
-```bash
-git checkout -b your-name
-```
+Each member must create a branch with **their own name**.
 
 Example:
 
 ```bash
-git checkout -b abdulrahman
+git checkout -b Your_name 
 ```
 
+
+Check the current branch:
+
+```bash
+git branch
+```
+
+Example output:
+
+```bash
+* ahmed
+  main
+```
+
+The `*` means this is the current branch you are working on.
+
 ---
 
-# Step 4 — Make Your Changes
 
-Edit the project files using any editor such as:
 
-* Visual Studio Code
-* Notepad
-* Any IDE
 
----
 
-# Step 5 — Add Changes
+# 4. Add and Commit Changes
 
-After editing files, stage them:
+
+create for example the version of RISC V your are in
+``` bash
+mkdir RV32I_Single_Cycle
+
+cd RV32I_Single_Cycle
+
+```
+
+then add the files you want then:
+
+After editing files:
 
 ```bash
 git add .
 ```
 
----
-
-# Step 6 — Commit Changes
-
-Commit your work with a descriptive message:
+Then commit the changes:
 
 ```bash
 git commit -m "describe your changes"
 ```
 
-Example:
-
-```bash
-git commit -m "added instruction decoder"
-```
-
 ---
 
-# Step 7 — Push Your Branch
+# 5. Push Your Branch to GitHub
 
-Upload your branch to GitHub:
+First push of the branch:
 
 ```bash
-git push origin your-name
+git push -u origin your-name
 ```
 
 Example:
 
 ```bash
-git push origin abdulrahman
+git push -u origin ahmed_Abdulnasser
 ```
 
 ---
 
-# Step 8 — Pull Latest Updates
 
-Before starting new work, always pull the latest changes:
+
+# 6. Pull Latest Changes
+
+Before starting new work always pull the latest updates:
 
 ```bash
-git pull origin main
+git pull
 ```
 
 ---
 
-# Recommended Workflow
+# Basic Workflow
 
-1. Clone the repository
-2. Create your branch
-3. Make changes
-4. Add changes
-5. Commit changes
-6. Push your branch
-7. Open a Pull Request on GitHub
+Every time you work on the project:
 
+```bash
+git pull
+git add .
+git commit -m "update"
+git push
 ```
-```
+
+---
+
+# Important Rules
+
+- Do NOT push directly to `main`
+- Each member must work on a **branch with their own name**
+- Always `pull` before starting work
+- Always write a clear commit message
