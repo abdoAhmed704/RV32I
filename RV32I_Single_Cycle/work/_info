@@ -1,0 +1,84 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/ABDOU/Desktop/GP_folder/RISC-V/RV32I/RV32I_Single_Cycle
+T_opt
+!s110 1773698274
+Vif9N2a>9Smf^mRbU6Z5^81
+Z2 04 16 4 work register_file_tb fast 0
+=1-7c8ae19cdeb7-69b87ce2-4a-175c
+Z3 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1773698502
+VFaNacGQYkmeI3@;b1C;mj1
+R2
+=1-7c8ae19cdeb7-69b87dc5-35e-60e8
+R3
+o-quiet -auto_acc_if_foreign -work work +acc
+R4
+n@_opt1
+R5
+vregister_file
+Z6 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z7 !s110 1773698497
+!i10b 1
+!s100 X_Y9adi6?]dES<5lSHf:=1
+ID@k8SbNJ54:UG;Z_zAf:z1
+S1
+R1
+w1773698196
+8register_file.sv
+Fregister_file.sv
+!i122 6
+L0 1 20
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z10 !s108 1773698497.000000
+!s107 register_file.sv|
+!s90 -reportprogress|300|register_file.sv|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+vregister_file_tb
+R6
+R7
+!i10b 1
+!s100 :PeANHnleHnJdYT1GifVf2
+I^3Nja2IzB_MUJdR<9hjPk0
+S1
+R1
+w1773698494
+8register_file_tb.sv
+Fregister_file_tb.sv
+!i122 7
+L0 3 80
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 register_file_tb.sv|
+!s90 -reportprogress|300|register_file_tb.sv|
+!i113 0
+R11
+R4
