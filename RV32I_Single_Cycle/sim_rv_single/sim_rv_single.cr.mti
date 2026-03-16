@@ -1,0 +1,24 @@
+{C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/sim_rv_single/data_mem.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/sim_rv_single/data_mem.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module data_mem
+
+Top level modules:
+	data_mem
+
+} {} {}} {C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit.sv} {2 {vlog -work work -vopt -sv -stats=none {C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module control_unit
+** Warning: C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit.sv(97): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit.sv(111): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	control_unit
+
+} {} {}} {C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/data_mem_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/data_mem_tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module data_mem_tb
+
+Top level modules:
+	data_mem_tb
+
+} {} {}}
