@@ -1,0 +1,28 @@
+{C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/sim_rv_single/data_mem.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/sim_rv_single/data_mem.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module data_mem
+
+Top level modules:
+	data_mem
+
+} {} {}} {C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module control_unit_tb
+** Error: C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv(95): Illegal declaration after the statement near line '90'.  Declarations must precede statements.  Look for stray semicolons.
+** Warning: C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv(129): (vlog-2244) Variable 'tests' is implicitly static. You must either explicitly declare it as static or automatic
+or remove the initialization in the declaration of variable.
+** Error: C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv(131): Illegal declaration after the statement near line '102'.  Declarations must precede statements.  Look for stray semicolons.
+** Error: C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv(133): (vlog-2730) Undefined variable: 'i'.
+** Error: C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv(148): (vlog-13161) unexpected '$display', expecting elaboration system task $fatal/$error/$warning/$info.
+** Error: C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv(149): (vlog-13161) unexpected '$display', expecting elaboration system task $fatal/$error/$warning/$info.
+** Error: C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv(151): (vlog-13161) unexpected '$finish', expecting elaboration system task $fatal/$error/$warning/$info.
+** Error: (vlog-13069) C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv(152): near "end": syntax error, unexpected end.
+
+} {4.0 5.0 7.0 13.0} {}} {C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/data_mem_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/data_mem_tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module data_mem_tb
+
+Top level modules:
+	data_mem_tb
+
+} {} {}}
