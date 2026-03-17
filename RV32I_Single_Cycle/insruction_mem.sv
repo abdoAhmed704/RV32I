@@ -1,5 +1,5 @@
 module instruction_mem
-#(parameter MEM_Depth = 256,
+#(parameter MEM_Depth = 32,
   parameter MEM_Width = 32)(
   input [31:0]PC,
   output reg [31:0]inst);

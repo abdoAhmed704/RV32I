@@ -91,7 +91,8 @@ module control_unit (
                     3'b000: begin // ADD/SUB
                         if ({opcode[5], funct7_5} == 2'b11) begin
                             ALUControl = 3'b001;    // Substract operation
-                        else
+                        end
+                        else begin
                             ALUControl = 3'b000;    // ADD operation
                         end
                     end
@@ -106,7 +107,7 @@ module control_unit (
                     end
                 endcase
             end
-            default: ALUControl = 3'bxxxx; // Invalid ALUOp code    
+            default: ALUControl = 3'bxxx; // Invalid ALUOp code    
         endcase
     end
 endmodule

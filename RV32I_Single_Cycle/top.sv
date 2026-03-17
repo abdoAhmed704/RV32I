@@ -1,6 +1,7 @@
-module top(input [31:0] inst, input  [31:0] pc, input clk, output [31:0] result);
+module top(input clk, output [31:0] result);
 
-
+reg [31:0] pc;
+wire [31:0] inst;
 
 wire Branch; 
 wire PCSrc;
@@ -36,11 +37,11 @@ control_unit ctr_u(.opcode(inst[6:0]), .funct7_5(inst[30]), .funct3(inst[14:12])
                     .PCSrc(PCSrc), .ResultSrc(ResultSrc), .ALUControl(ALUControl),  .ALUSrc(ALUSrc),  .ImmSrc(ImmSrc),  .RegWrite(RegWrite), 
                     .MemWrite(MemWrite), .ALUOp(ALUOp), .jump(jump));
 
-register_file rg_file (.A1(inst[19:15]), .A2(inst[24:20]), .A3(inst[11:7]), .WD3(), 
+register_file rg_file (.A1(inst[19:15]), .A2(inst[24:20]), .A3(inst[11:7]), .WD3(result), 
                        .w_en(RegWrite), .clk(clk), .RD1(RD1), .RD2(RD2));
 
 // code for extend
-assign  extend_out  = {7'b00000000, inst[31:7]};
+assign  extend_out  = {7'b0, inst[31:7]};
 
 
 
