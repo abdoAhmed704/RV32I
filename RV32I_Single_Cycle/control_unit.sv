@@ -1,6 +1,6 @@
 module control_unit (
     input [6:0] opcode, // 6-bit opcode from instruction
-    input [6:0] funct7,  // 7-bit function code for R-type instructions
+    input funct7_5,  // 7-bit function code for R-type instructions
     input [2:0] funct3,  // 3-bit function code for R-type and I-type instructions
     input Zero, // Zero flag from ALU
     output reg Branch, // Control signal for branch instructions
@@ -89,12 +89,10 @@ module control_unit (
             2'b10: begin // R-type instructions
                 case (funct3)
                     3'b000: begin // ADD/SUB
-                        if (funct7 == 7'b0000000) begin
-                            ALUControl = 3'b000; // ADD operation
-                        end else if (funct7 == 7'b0100000) begin
-                            ALUControl = 3'b001; // SUB operation
-                        end else begin
-                            ALUControl = 3'bxxxx; // Invalid funct7 for ADD/SUB
+                        if ({opcode[5], funct7_5} == 2'b11) begin
+                            ALUControl = 3'b001;    // Substract operation
+                        else
+                            ALUControl = 3'b000;    // ADD operation
                         end
                     end
                     3'b010: begin

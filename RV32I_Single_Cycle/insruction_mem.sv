@@ -8,5 +8,7 @@ module instruction_mem
 
   always@(*)begin
       inst <= mem[PC]; // pc select address from mem
-      end         // os writes in mem and reg file reads from it 
-  endmodule         // no condition on reading form mem and its async
+      
+    end         // os writes in mem and reg file reads from it 
+
+endmodule         // no condition on reading form mem and its async

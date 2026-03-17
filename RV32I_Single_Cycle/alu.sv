@@ -1,7 +1,7 @@
 module alu(
 input [31:0] src_a, src_b,
 input [2:0] alu_control,
-output zero,
+output Zero,
 output reg [31:0] result
 );
 
@@ -22,6 +22,6 @@ always @(*) begin
 
 end
 
-assign zero = (result == 0);
+assign Zero = (result == 0);
 
 endmodule
