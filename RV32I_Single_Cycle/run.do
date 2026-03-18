@@ -3,6 +3,9 @@ vlib work
 # compile design files
 vlog alu.sv
 vlog control_unit.sv
+vlog PCTarget.sv
+vlog extend.sv
+vlog PCPlus4.sv
 vlog data_mem.sv
 vlog insruction_mem.sv
 vlog register_file.sv
