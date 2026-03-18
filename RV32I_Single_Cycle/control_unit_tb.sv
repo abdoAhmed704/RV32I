@@ -1,7 +1,7 @@
 module control_unit_tb();
     // Define Signals
     typedef logic [31:0] instr_t;
-    instr_t instr = 32'hFE420AE3; // Example R-type instruction (opcode 0110011)
+    instr_t instr = 32'h0062E233; // Example R-type instruction (opcode 0110011)
 
     logic [6:0] opcode = instr[6:0];
     logic funct7_5 = instr[30];
@@ -37,8 +37,8 @@ module control_unit_tb();
         // Test R-type instruction or
         #10;
         $display("Testing R-type instruction:");
-        $display("PCSrc: %b, ResultSrc: %b, ALUControl: %b, ALUSrc: %b, ImmSrc: %b, RegWrite: %b, MemWrite: %b", 
-                 PCSrc, ResultSrc, ALUControl, ALUSrc, ImmSrc, RegWrite, MemWrite);
+        $display("PCSrc: %b, ResultSrc: %b, ALUControl: %b, ALUSrc: %b, ImmSrc: %b, RegWrite: %b, MemWrite: %b, Branch = %b, jump = %b", 
+                 PCSrc, ResultSrc, ALUControl, ALUSrc, ImmSrc, RegWrite, MemWrite, dut.Branch, dut.jump);
         $stop;
     end
 endmodule
