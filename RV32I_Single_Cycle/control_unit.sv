@@ -3,8 +3,7 @@ module control_unit (
     input funct7_5,  // 7-bit function code for R-type instructions
     input [2:0] funct3,  // 3-bit function code for R-type and I-type instructions
     input Zero, // Zero flag from ALU
-    output reg Branch, // Control signal for branch instructions
-    output reg PCSrc, // Control signal for PC source
+    output wire PCSrc, // Control signal for PC source
     output reg [1:0]ResultSrc, // Control signal for ALU result source
     output reg [2:0] ALUControl, // Control signal for ALU operation
     output reg ALUSrc, // Control signal for ALU RD2 source .. Extended or not
@@ -12,7 +11,15 @@ module control_unit (
     output reg RegWrite, // Control signal for register write enable
     output reg MemWrite // Control signal for memory write enable
 );
+    reg jump;
+    reg Branch;
+    reg [1:0] ALUOp; // Control signal for ALU Decoder
+
+    assign PCSrc = (Branch && Zero) || jump; // PC source is determined by branch condition or jump signal
     always @(*) begin
+
+        // PC Logic
+
         // Default values for control signals
         ResultSrc = 2'b00; // Default to ALU result
         ALUSrc = 0; // Default to register source
@@ -29,7 +36,8 @@ module control_unit (
                 RegWrite = 1; // Default to no register write
                 MemWrite = 0; // Default to no memory write
                 ALUOp = 2'b10; // Default to R-type operation
-                jump = 0; // Default to no jump
+                Branch = 0;
+                jump=0;
             end
             7'b1100011: begin // beq instruction
                 ResultSrc = 2'bxx; // Default to ALU result
@@ -48,7 +56,9 @@ module control_unit (
                 MemWrite = 0; // Disable memory write for load instructions
                 ALUOp = 2'b00; // Set ALU operation type for load instructions
                 ResultSrc = 2'b01; // Use memory data as result for load instructions
-                jump = 0; // Disable jump for load instructions
+                Branch = 0;
+                jump=0;
+
             end
             7'b0100011: begin // Store instructions (SW)
                 ALUSrc = 1; // Use immediate value for address calculation
@@ -57,7 +67,8 @@ module control_unit (
                 MemWrite = 1; // Enable memory write for store instructions
                 ALUOp = 2'b00; // Set ALU operation type for store instructions
                 ResultSrc = 2'bxx; // Use ALU result for store instructions
-                jump = 0; // Disable jump for store instructions
+                Branch = 0;
+                jump=0;
             end
             7'b1101111: begin // JAL instruction
                 ALUSrc = 1'bx; // Use register source for address calculation
@@ -66,7 +77,13 @@ module control_unit (
                 MemWrite = 0; // Disable memory write for JAL instruction
                 ALUOp = 2'bxx; // Set ALU operation type for JAL instruction
                 ResultSrc = 2'b10; // Use memory data as result for JAL instruction
-                jump = 1; // Enable jump for JAL instruction
+                Branch = 0;
+                jump=0;
+            end
+            default: begin 
+                Branch = 0;
+                jump=0;
+
             end
         endcase
         
