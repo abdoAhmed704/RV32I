@@ -2,15 +2,15 @@ module control_unit (
     input [6:0] opcode, // 6-bit opcode from instruction
     input funct7_5,  // 7-bit function code for R-type instructions
     input [2:0] funct3,  // 3-bit function code for R-type and I-type instructions
-    input Zero, // Zero flag from ALU
+    // input Zero, // Zero flag from ALU
     output reg [1:0]ResultSrc, // Control signal for ALU result source
     output reg [2:0] ALUControl, // Control signal for ALU operation
     output reg ALUSrc, // Control signal for ALU RD2 source .. Extended or not
     output reg [1:0] ImmSrc, // Control signal for immediate value source
     output reg RegWrite, // Control signal for register write enable
-    output reg MemWrite // Control signal for memory write enable
-    output reg jump;
-    output reg Branch;
+    output reg MemWrite, // Control signal for memory write enable
+    output reg jump,
+    output reg Branch
 );
 
     reg [1:0] ALUOp; // Control signal for ALU Decoder

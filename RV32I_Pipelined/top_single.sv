@@ -1,5 +1,5 @@
 module top(input clk, input reset_n, output [31:0] result);
-
+ 
 reg [31:0] pc;
 wire [31:0] inst;
 

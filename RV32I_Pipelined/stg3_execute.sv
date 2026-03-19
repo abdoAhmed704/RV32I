@@ -15,7 +15,6 @@ module execute (
     output reg BranchE,
     output reg [2:0] ALUControlE,
     output reg ALUSrcE,
-    output reg [1:0] ImmSrcE,
     output reg [31:0] RD1E,
     output reg [31:0] RD2E,
     output reg [31:0] ImmExtE,
@@ -33,11 +32,8 @@ module execute (
     wire [1:0] ImmSrcD;
     wire [31:0] RD1;
     wire [31:0] RD2;
-    wire [31:0] PCD;
-    wire [31:0] PCPlus4D;
     wire [31:0] ImmExtD;
     wire [4:0] RdD;
-
     assign RdD = instrD[11:7]; // Destination register address from the instruction
 
     // Register file instantiation
@@ -46,7 +42,7 @@ module execute (
         .w_en(RegWriteW), // Write enable signal from the last stage
         .A1(instrD[19:15]), // Source register 1 address
         .A2(instrD[24:20]), // Source register 2 address
-        .A3(RdW]),   // Destination register address
+        .A3(RdW),   // Destination register address
         .WD3(ResultW), // Data to write to the register file
         .RD1(RD1),    // Data read from source register 1
         .RD2(RD2)     // Data read from source register 2
@@ -55,23 +51,25 @@ module execute (
     // instantiate control unit
     control_unit cu (
         .opcode(instrD[6:0]), // Opcode from the instruction
-        .funct7_5(instrD[31:25]),  // funct7[5] from the instruction
+        .funct7_5(instrD[30]),  // funct7[5] from the instruction
         .funct3(instrD[14:12]),  // funct3 from the instruction
         .ResultSrc(ResultSrcD), // Control signal for ALU result source
         .ALUControl(ALUControlD), // Control signal for ALU operation
         .ALUSrc(ALUSrcD), // Control signal for ALU RD2 source .. Extended or not
         .ImmSrc(ImmSrcD), // Control signal for immediate value source
         .RegWrite(RegWriteD), // Control signal for register write enable
-        .MemWrite(MemWriteD) // Control signal for memory write enable
+        .MemWrite(MemWriteD), // Control signal for memory write enable
         .jump(jumpD),
         .Branch(BranchD)
+        // .Zero()
     );
+
 
     // Immediate extension unit
     extend immext (
-        .instr(instrD), // Instruction input
-        .ImmSrc(ImmSrcD), // Control signal for immediate value source
-        .ImmExt(ImmExtD) // Extended immediate output
+        .Instr(instrD), // Instruction input
+        .imm_Src(ImmSrcD), // Control signal for immediate value source
+        .imm_extend(ImmExtD) // Extended immediate output
     );
 
     // Sequential logic to update pipeline registers on the rising edge of the clock
@@ -85,7 +83,6 @@ module execute (
         BranchE <= BranchD; // Update the branch control signal for the execute stage
         ALUControlE <= ALUControlD; // Update the ALU control signal for the execute stage
         ALUSrcE <= ALUSrcD; // Update the ALU source control signal for the execute stage
-        ImmSrcE <= ImmSrcD; // Update the immediate source control signal for the execute stage
         RD1E <= RD1; // Update the data read from source register 1 for the execute stage
         RD2E <= RD2; // Update the data read from source register 2 for the execute stage
         ImmExtE <= ImmExtD; // Update the extended immediate value for the execute stage

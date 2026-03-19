@@ -15,7 +15,13 @@ module fetch(
         if (!rst_n) begin
             PCF <= 0; // Reset PC to 0 on reset
         end else begin
+            $display("here");
+            $display("PCFx = %d", PCFx);
+            $display("PCF = %d", PCF);
             PCF <= PCFx; // Update PC with the next value on each clock cycle
+            $display("PCFx = %d", PCFx);
+            $display("PCF = %d", PCF);
+            $display("PCPlus4F = %d", PCPlus4F);
         end
     end
 

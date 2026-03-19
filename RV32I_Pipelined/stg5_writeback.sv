@@ -12,11 +12,11 @@ module writeBack(
     output reg [4:0] RdW,
     output reg [31:0] ALUResultW,
     output reg [31:0] ReadDataW,
-    output reg [31:0] PCPlus4W,
-    output reg [31:0] ResultW
+    output reg [31:0] PCPlus4W
+    // output reg [31:0] ResultW
 );
 
-    wire ReadDataM;
+    wire [31:0] ReadDataM;
 
     // instantiate Data Memory
     data_mem dmem (
@@ -27,6 +27,7 @@ module writeBack(
         .ReadData(ReadDataM) // Data read from memory (to be used in write-back stage)
     );
 
+
     // Pipeline register for the memory stage to write-back stage
     always @(posedge clk) begin
         RegWriteW <= RegWriteM; // Pass register write enable signal to write-back stage
@@ -36,12 +37,7 @@ module writeBack(
         ALUResultW <= ALUResultM; // Pass ALU result to write-back stage
         ReadDataW <= ReadDataM; // Pass data read from memory to write-back stage
 
-        case (ResultSrcW)
-            2'b00: ResultW <= ALUResultW; // ALU result
-            2'b01: ResultW <= ReadDataW; // Data read from memory
-            2'b10: ResultW <= PCPlus4W; // PC + 4 (for jump and link instructions)
-            default: ResultW <= 0; // Default case
-        endcase
     end
+
 
 endmodule
