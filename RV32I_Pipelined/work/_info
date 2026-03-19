@@ -1,0 +1,386 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2021.1/examples
+T_opt
+Z0 !s110 1773858363
+V`7;84;XS81ITjYI7jLRLY2
+04 6 4 work top_tb fast 0
+=1-fc3497dde9b4-69baee3b-2c1-6918
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+valu
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1773858362
+!i10b 1
+!s100 eTT9oXDgC``U3@4e@<V>d2
+I8nC8il^Zb:]68;ozZSo[91
+S1
+Z4 dC:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle
+Z5 w1773773843
+8alu.sv
+Falu.sv
+!i122 15
+Z6 L0 1 27
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z9 !s108 1773858362.000000
+!s107 alu.sv|
+!s90 -reportprogress|300|alu.sv|
+!i113 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vcontrol_unit
+R2
+R3
+!i10b 1
+!s100 mVLDZiHj1^:WRlE?liaXM2
+IRiod?Xi^[QEC42U6jX:n>2
+S1
+R4
+w1773856941
+8control_unit.sv
+Fcontrol_unit.sv
+!i122 16
+L0 1 121
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 control_unit.sv|
+!s90 -reportprogress|300|control_unit.sv|
+!i113 0
+R10
+R1
+vcontrol_unit_tb
+R2
+Z11 !s110 1773858350
+!i10b 1
+!s100 2l]BRQWDagd@cn0Mk?kzG0
+IKcC=3T5<FE<M]9Y>XS;RB2
+S1
+R4
+w1773853631
+8C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv
+FC:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv
+!i122 2
+L0 1 44
+R7
+R8
+r1
+!s85 0
+31
+Z12 !s108 1773858350.000000
+!s107 C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/control_unit_tb.sv|
+!i113 0
+Z13 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vdata_mem
+R2
+R0
+!i10b 1
+!s100 HMcY3Q7hGlAziXa<VTl;g2
+I;4Jh]hK[N;?TX33W9zjZ22
+S1
+R4
+Z14 w1773853256
+8data_mem.sv
+Fdata_mem.sv
+!i122 20
+L0 1 23
+R7
+R8
+r1
+!s85 0
+31
+Z15 !s108 1773858363.000000
+!s107 data_mem.sv|
+!s90 -reportprogress|300|data_mem.sv|
+!i113 0
+R10
+R1
+vdata_mem_tb
+R2
+R11
+!i10b 1
+!s100 QLECWJOWU5b8Lg6BE?@V51
+IEmNY2[JPC[5lc7jl3UnoR2
+S1
+R4
+R5
+8C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/data_mem_tb.sv
+FC:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/data_mem_tb.sv
+!i122 4
+L0 1 62
+R7
+R8
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/data_mem_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/data_mem_tb.sv|
+!i113 0
+R13
+R1
+vextend
+R2
+R3
+!i10b 1
+!s100 O>X4d^WY4II>2GPTeR:1V0
+INC8_:cJzLgV_3PC]W1e2d3
+S1
+R4
+R14
+8extend.sv
+Fextend.sv
+!i122 18
+L0 1 20
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 extend.sv|
+!s90 -reportprogress|300|extend.sv|
+!i113 0
+R10
+R1
+vinstruction_mem
+R2
+R0
+!i10b 1
+!s100 mlHTdOWD1UBEm1>Bb=O;00
+IMQ:LIz;l3KR<lg9e51>e71
+S1
+R4
+R14
+8insruction_mem.sv
+Finsruction_mem.sv
+!i122 21
+L0 1 14
+R7
+R8
+r1
+!s85 0
+31
+R15
+!s107 insruction_mem.sv|
+!s90 -reportprogress|300|insruction_mem.sv|
+!i113 0
+R10
+R1
+vinstruction_mem_tb
+R2
+R11
+!i10b 1
+!s100 g[QazX;bn70J_c2aeC@ff3
+IGkKdU=E^6@IQen9>fgd9_2
+S1
+R4
+R14
+8C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/instruction_tb.sv
+FC:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/instruction_tb.sv
+!i122 7
+R6
+R7
+R8
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/instruction_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/instruction_tb.sv|
+!i113 0
+R13
+R1
+vPCPlus4
+R2
+R3
+!i10b 1
+!s100 j;1LL`ORYahD?D=g;og5`1
+Ii]]jIZIDoPfIgFU[YUf;[0
+S1
+R4
+Z16 w1773805287
+8PCPlus4.sv
+FPCPlus4.sv
+!i122 19
+L0 1 8
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 PCPlus4.sv|
+!s90 -reportprogress|300|PCPlus4.sv|
+!i113 0
+R10
+R1
+n@p@c@plus4
+vPCTarget
+R2
+R3
+!i10b 1
+!s100 mFC;UNZYa2OBI@ZAkbmkB0
+IdRCIUBZ_YRNN;LO4EicI;3
+S1
+R4
+w1773853626
+8PCTarget.sv
+FPCTarget.sv
+!i122 17
+L0 1 11
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 PCTarget.sv|
+!s90 -reportprogress|300|PCTarget.sv|
+!i113 0
+R10
+R1
+n@p@c@target
+vregister_file
+R2
+R0
+!i10b 1
+!s100 6m8N`ASmJVP5La1<2inhJ0
+IOMXTnZiE]VPZ8cSRR`WD63
+S1
+R4
+R14
+8register_file.sv
+Fregister_file.sv
+!i122 22
+L0 1 21
+R7
+R8
+r1
+!s85 0
+31
+R15
+!s107 register_file.sv|
+!s90 -reportprogress|300|register_file.sv|
+!i113 0
+R10
+R1
+vtb_PCPlus4
+R2
+Z17 !s110 1773858351
+!i10b 1
+!s100 MZ8H<8O1i5=[d9e^Q><oN1
+Ia[ZeB];7BE40G`nF>?J6n0
+S1
+R4
+R16
+8C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/tb_PCPlus4.sv
+FC:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/tb_PCPlus4.sv
+!i122 11
+L0 1 31
+R7
+R8
+r1
+!s85 0
+31
+Z18 !s108 1773858351.000000
+!s107 C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/tb_PCPlus4.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/tb_PCPlus4.sv|
+!i113 0
+R13
+R1
+ntb_@p@c@plus4
+vtb_PCTarget
+R2
+R17
+!i10b 1
+!s100 0bPf]VWMO0h0L]c:_DE8O2
+Ii]mWEVUfb`^VBC5LC;I9O2
+S1
+R4
+R16
+8C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/tb_PCTarget.sv
+FC:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/tb_PCTarget.sv
+!i122 12
+L0 1 35
+R7
+R8
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/tb_PCTarget.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Single_Cycle/tb_PCTarget.sv|
+!i113 0
+R13
+R1
+ntb_@p@c@target
+vtop
+R2
+R0
+!i10b 1
+!s100 ``TImC0h6ZoRG`DH^GCfJ2
+IP?C<n]oQ0AVcm;@1_9kO<2
+S1
+R4
+R14
+8top.sv
+Ftop.sv
+!i122 23
+L0 1 75
+R7
+R8
+r1
+!s85 0
+31
+R15
+!s107 top.sv|
+!s90 -reportprogress|300|top.sv|
+!i113 0
+R10
+R1
+vtop_tb
+R2
+R0
+!i10b 1
+!s100 zFK8La`?SFBgXPkfk`W]l3
+IoAbffaKDFkUe_4WbKQfiQ0
+S1
+R4
+R14
+8top_tb.sv
+Ftop_tb.sv
+!i122 24
+L0 1 39
+R7
+R8
+r1
+!s85 0
+31
+R15
+!s107 top_tb.sv|
+!s90 -reportprogress|300|top_tb.sv|
+!i113 0
+R10
+R1
