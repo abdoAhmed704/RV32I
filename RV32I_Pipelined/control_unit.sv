@@ -38,7 +38,17 @@ module control_unit (
                 Branch = 0;
                 jump=0;
             end
-            7'b1100011: begin // beq instruction
+            7'b0010011: begin // I-type instructions (ADDI)
+                ResultSrc = 2'b00; // Default to ALU result
+                ALUSrc = 1; // Use immediate value for ALU source
+                ImmSrc = 2'b00; // Use I-type immediate for address calculation
+                RegWrite = 1; // Enable register write for I-type instructions
+                MemWrite = 0; // Disable memory write for I-type instructions
+                ALUOp = 2'b10; // Set ALU operation type for I-type instructions
+                Branch = 0;
+                jump=0;
+            end
+            7'b1100011: begin // B Type - beq instruction
                 ResultSrc = 2'bxx; // Default to ALU result
                 ALUSrc = 0; // Default to register source
                 ImmSrc = 2'b10; // Use B-type immediate for branch address calculation
@@ -78,6 +88,49 @@ module control_unit (
                 ResultSrc = 2'b10; // Use memory data as result for JAL instruction
                 Branch = 0;
                 jump=0;
+            end
+            7'b1100111: begin // JALR instruction
+                ALUSrc = 1; // Use immediate value for address calculation
+                ImmSrc = 2'b00; // Use I-type immediate for JALR instruction
+                RegWrite = 1; // Enable register write for JALR instruction
+                MemWrite = 0; // Disable memory write for JALR instruction
+                ALUOp = 2'bxx; // Set ALU operation type for JALR instruction
+                ResultSrc = 2'b10; // Use memory data as result for JALR instruction
+                Branch = 0;
+                jump=1;
+            end
+            7'b0110111: begin // LUI instruction
+                ALUSrc = 1; // Use immediate value for address calculation
+                ImmSrc = 2'b00; // Use I-type immediate for LUI instruction
+                RegWrite = 1; // Enable register write for LUI instruction
+                MemWrite = 0; // Disable memory write for LUI instruction
+                ALUOp = 2'bxx; // Set ALU operation type for LUI instruction
+                ResultSrc = 2'b11; // Use memory data as result for LUI instruction
+                Branch = 0;
+                jump=0;
+            end
+            7'b0010111: begin // AUIPC instruction
+                ALUSrc = 1; // Use immediate value for address calculation
+                ImmSrc = 2'b00; // Use I-type immediate for AUIPC instruction
+                RegWrite = 1; // Enable register write for AUIPC instruction
+                MemWrite = 0; // Disable memory write for AUIPC instruction
+                ALUOp = 2'bxx; // Set ALU operation type for AUIPC instruction
+                ResultSrc = 2'b11; // Use memory data as result for AUIPC instruction
+                Branch = 0;
+                jump=0;
+            end
+            7'b1110011: begin // ECALL instruction ane EBREAK instruction
+                ALUSrc = 1'bx; // Don't care for ECALL
+                ImmSrc = 2'bxx; // Don't care for ECALL
+                RegWrite = 0; // Disable register write for ECALL instruction
+                MemWrite = 0; // Disable memory write for ECALL instruction
+                ALUOp = 2'bxx; // Don't care for ECALL instruction
+                ResultSrc = 2'bxx; // Don't care for ECALL instruction
+                Branch = 0;
+                jump=0;
+            end
+            7'b0001111: begin
+                // fence instruction
             end
             default: begin 
                 Branch = 0;
