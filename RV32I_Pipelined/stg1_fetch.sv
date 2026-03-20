@@ -7,7 +7,7 @@ module fetch(
     output reg [31:0] PCF
 );
 
-    wire PCFx;
+    wire [31:0] PCFx;
     // Next PC value is either the target address from execute stage or PC + 4 from fetch stage
     assign PCFx = (PCSrcE) ? PCTargetE : PCPlus4F; 
 
