@@ -56,7 +56,7 @@ wire [31:0] PCPlus4W;
 
 
 
-fetch fet(.clk(clk), .rst_n(rst_n), .PCPlus4F(PCPlus4D), .PCTargetE(PCTargetE), .PCSrcE(PCSrcE), .PCF(PCF));
+fetch fet(.clk(clk), .rst_n(rst_n), .PCPlus4F(PCPlus4F), .PCTargetE(PCTargetE), .PCSrcE(PCSrcE), .PCF(PCF));
 
 
 decode dec(.clk(clk), .PCF(PCF), .instrD(instrD), .PCPlus4D(PCPlus4D), .PCD(PCD), .PCPlus4F(PCPlus4F));
