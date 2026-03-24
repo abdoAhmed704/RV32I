@@ -15,7 +15,6 @@ always @(*) begin
         3'b011: result = src_a | src_b;     // OR
         3'b010: result = src_a & src_b;     // AND
 
-
         default: result = 32'b0;
 
     endcase

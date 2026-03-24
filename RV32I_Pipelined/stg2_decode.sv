@@ -26,7 +26,7 @@ module decode (
         instrD <= instrF;
         PCPlus4D <= PCPlus4F;
         PCD <= PCF;
-        
+
     end
 
 endmodule

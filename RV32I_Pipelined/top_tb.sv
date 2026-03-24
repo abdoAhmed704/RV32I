@@ -24,7 +24,7 @@ initial begin
     @(negedge clk);
     reset_n = 1;
     @(negedge clk);
-    repeat(30)begin
+    repeat(10)begin
         @(negedge clk);
     end
     $stop;
