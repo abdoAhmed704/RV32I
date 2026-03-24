@@ -1,4 +1,5 @@
 module data_mem_tb;
+
     // Parameters
     localparam DATA_WIDTH = 32;
     localparam ADDR_WIDTH = 12; // 4KB memory requires 12 bits for addressing
