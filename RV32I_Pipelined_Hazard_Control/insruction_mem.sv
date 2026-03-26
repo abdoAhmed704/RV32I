@@ -9,6 +9,5 @@ module instruction_mem
   always @(*) begin
     inst = mem[PC >> 2]; // FIXED
   end
-  // os writes in mem and reg file reads from it 
-
+  
 endmodule         // no condition on reading form mem and its async

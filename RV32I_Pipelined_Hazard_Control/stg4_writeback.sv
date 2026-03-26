@@ -1,4 +1,4 @@
-module writeBack(
+module memory(
     input clk,
     input RegWriteM,
     input [1:0] ResultSrcM,
@@ -26,7 +26,6 @@ module writeBack(
         .WriteData(WriteDataM), // Data to write to memory (from execute stage)
         .ReadData(ReadDataM) // Data read from memory (to be used in write-back stage)
     );
-
 
     // Pipeline register for the memory stage to write-back stage
     always @(posedge clk) begin

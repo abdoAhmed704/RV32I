@@ -1,4 +1,4 @@
-module memory (
+module excute (
     input clk,
     input [31:0] PCE,
     input [31:0] PCPlus4E,
