@@ -1,16 +1,15 @@
 module control_unit (
-    input [6:0] opcode, // 6-bit opcode from instruction
-    input funct7_5,  // 7-bit function code for R-type instructions
-    input [2:0] funct3,  // 3-bit function code for R-type and I-type instructions
+    input logic[6:0] opcode, // 6-bit opcode from instruction
+    input logic [2:0] funct3,  // 3-bit function code for R-type and I-type instructions
     // input Zero, // Zero flag from ALU
-    output reg [1:0]ResultSrc, // Control signal for ALU result source
-    output reg [2:0] ALUControl, // Control signal for ALU operation
-    output reg ALUSrc, // Control signal for ALU RD2 source .. Extended or not
-    output reg [1:0] ImmSrc, // Control signal for immediate value source
-    output reg RegWrite, // Control signal for register write enable
-    output reg MemWrite, // Control signal for memory write enable
-    output reg jump,
-    output reg Branch
+    output logic [1:0]ResultSrc, // Control signal for ALU result source
+    output logic [2:0] ALUControl, // Control signal for ALU operation
+    output logic ALUSrc, // Control signal for ALU RD2 source .. Extended or not
+    output logic [1:0] ImmSrc, // Control signal for immediate value source
+    output logic RegWrite, // Control signal for register write enable
+    output logic MemWrite, // Control signal for memory write enable
+    output logic jump,
+    output logic Branch
 );
 
     reg [1:0] ALUOp; // Control signal for ALU Decoder
@@ -149,25 +148,32 @@ module control_unit (
             2'b10: begin // R-type instructions
                 case (funct3)
                     3'b000: begin // ADD/SUB
-                        if ({opcode[5], funct7_5} == 2'b11) begin
-                            ALUControl = 3'b001;    // Substract operation
-                        end
-                        else begin
-                            ALUControl = 3'b000;    // ADD operation
-                        end
+                        ALUControl = 3'b000;
+                    end
+                    3'b001: begin
+                        ALUControl = 3'b110;        // Shift left logical
                     end
                     3'b010: begin
-                        ALUControl = 3'b101;
+                        ALUControl = 3'b101;        // Set Less Than
+                    end
+                    3'b011: begin
+                        ALUControl = 3'b111;        // Set Less Than U
+                    end
+                    3'b100: begin
+                        ALUControl = 3'b100;        // XOR
+                    end
+                    3'b101: begin
+                        ALUControl = 3'b001;        // Shift right Logical w Arithematic
                     end
                     3'b110: begin
-                        ALUControl = 3'b011;
+                        ALUControl = 3'b011;        // OR
                     end
                     3'b111: begin
-                        ALUControl = 3'b010;
+                        ALUControl = 3'b010;        // AND
                     end
                 endcase
             end
-            default: ALUControl = 3'bxxx; // Invalid ALUOp code    
+            default: ALUControl = 3'b000; // Invalid ALUOp code    
         endcase
     end
 endmodule
