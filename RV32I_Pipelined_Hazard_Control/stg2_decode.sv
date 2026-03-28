@@ -23,25 +23,29 @@ module decode (
     output logic [4:0] Rs1E, // Added for the hazard unit
     output logic [4:0] Rs2E, // Added for the hazard unit
     output logic [4:0] Rs1D, // Added for the hazard unit
-    output logic [4:0] Rs2D // Added for the hazard unit
+    output logic [4:0] Rs2D, // Added for the hazard unit
+    output logic funct7_5E
 );
 
-    wire RegWriteD;
-    wire [1:0] ResultSrcD;
-    wire MemWriteD;
-    wire jumpD;
-    wire BranchD;
-    wire [2:0] ALUControlD;
-    wire ALUSrcD;
-    wire [1:0] ImmSrcD;
-    wire [31:0] RD1;
-    wire [31:0] RD2;
-    wire [31:0] ImmExtD;
-    wire [4:0] RdD;
+    logic RegWriteD;
+    logic [1:0] ResultSrcD;
+    logic MemWriteD;
+    logic jumpD;
+    logic BranchD;
+    logic [2:0] ALUControlD;
+    logic ALUSrcD;
+    logic [1:0] ImmSrcD;
+    logic [31:0] RD1;
+    logic [31:0] RD2;
+    logic [31:0] ImmExtD;
+    logic [4:0] RdD;
+
+    logic funct7_5;
 
 
     // for the hazard unit:
 
+    assign funct7_5 = instrD[30];
 
 
     assign RdD = instrD[11:7]; // Destination register address from the instruction
@@ -61,7 +65,6 @@ module decode (
     // instantiate control unit
     control_unit cu (
         .opcode(instrD[6:0]), // Opcode from the instruction
-        .funct7_5(instrD[30]),  // funct7[5] from the instruction
         .funct3(instrD[14:12]),  // funct3 from the instruction
         .ResultSrc(ResultSrcD), // Control signal for ALU result source
         .ALUControl(ALUControlD), // Control signal for ALU operation
@@ -121,8 +124,13 @@ module decode (
             RdE <= RdD;
             Rs1E <= Rs1D;
             Rs2E <= Rs2D;
+            funct7_5E <= funct7_5;
         end
     end
 
 
 endmodule
+
+
+
+
