@@ -26,7 +26,12 @@ module data_mem #(
 
     always @(posedge clk) begin
         if (WriteEnable) begin
-            memory[Address[ADDR_WIDTH-1:0]] = WriteData; // Write data to memory
+            case (funct3)
+                3'b000: memory[Address[ADDR_WIDTH-1:0]] <= {{24{1'b0}}, WriteData[7:0]};   // STORE BYTE
+                3'b001: memory[Address[ADDR_WIDTH-1:0]] <= {{16{1'b0}}, WriteData[15:0]};   // STORE HALF
+                3'b010: memory[Address[ADDR_WIDTH-1:0]] <= WriteData[31:0]; // STORE WORD
+                default: memory[Address] <= memory[Address];         // Do nothing
+            endcase
         end
     end
 

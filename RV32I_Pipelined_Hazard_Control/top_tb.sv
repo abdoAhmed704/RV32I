@@ -39,7 +39,7 @@ int cycle = 0;
 always @(posedge clk) begin
     cycle++;
 
-    $display("%3d   |       %h / %h        |     %h    |         RD1=%h RD2=%h ALU=%h S=%h B=%h J=%h      | %h W=%b | Rd=%0d W=%b Res=%h |  funct7_5E=%b | funct_7_5=%b",
+    $display("%3d   |       %h / %h        |     %h    |         RD1=%h RD2=%h ALU=%h S=%h B=%h J=%h      | %h W=%b | Rd=%0d W=%b Res=%h |  funct7_5E=%b | funct_7_5=%b | funct3M=%b",
     
     // ===== FETCH =====
     cycle,
@@ -66,7 +66,8 @@ always @(posedge clk) begin
     top_ins.RegWriteW,
     result,
     top_ins.funct7_5E,
-    top_ins.decode_keda_keda.funct7_5
+    top_ins.decode_keda_keda.funct7_5,
+    top_ins.data_mem.funct3M
     );
 end
 
