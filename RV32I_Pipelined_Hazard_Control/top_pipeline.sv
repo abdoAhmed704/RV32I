@@ -1,7 +1,4 @@
-module top_pipeline(inplut ck, input rst_n, output reg [31:0] result);
-
-
-
+module top_pipeline(input clk, input rst_n, output reg [31:0] result);
 
 
 logic [31:0] PCTargetE;

@@ -9,6 +9,8 @@ R0
 R0
 R0
 R0
+R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -20,372 +22,383 @@ Z1 dC:/Users/ABDOU/Desktop/GP_folder/RISC-V/ededd/RV32I/RV32I_Pipelined_Hazard_C
 T_opt
 !s110 1774724440
 VfjMQ]7<>m0kC5Q1iETXLF0
-04 6 4 work top_tb fast 0
+Z2 04 6 4 work top_tb fast 0
 =1-7c8ae19cdeb7-69c82558-42-854c
-!s124 OEM100
-o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+Z3 !s124 OEM100
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 tCvgOpt 0
 n@_opt
-OL;O;2021.1;73
-valu
-Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z4 !s110 1774724427
-!i10b 1
-!s100 G4XJMaO4SGP5@E8Xn;_WL1
-Ii2_JED@CaCe9V?_AHO4eC0
-S1
+Z6 OL;O;2021.1;73
 R1
-w1774723683
+T_opt1
+!s110 1774942530
+VcG<CX@eL=]lcMzn9i=1Km0
+R2
+=1-fc3497dde9b4-69cb7942-128-4f6c
+R3
+R4
+R5
+n@_opt1
+R6
+valu
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 !s110 1774942525
+!i10b 1
+!s100 TlPI?S[<N6;T=eF>[hgCi3
+ITJF3Z<OZ[M^:EFD1Wfo<?2
+S1
+Z9 dC:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Pipelined_Hazard_Control
+w1774942509
 8alu.sv
 Falu.sv
-!i122 17
-L0 1 45
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 OL;L;2021.1;73
+!i122 23
+Z10 L0 1 42
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2021.1;73
 r1
 !s85 0
 31
-Z7 !s108 1774724427.000000
-Z8 !s107 top_tb.sv|top_pipeline.sv|stg4_memory.sv|stg3_excute.sv|stg2_decode.sv|stg1_new_fetch.sv|register_file.sv|mux_3_1.sv|insruction_mem.sv|hazard_unit.sv|extend.sv|data_mem.sv|control_unit.sv|alu.sv|PCTarget.sv|
-Z9 !s90 -reportprogress|300|PCTarget.sv|alu.sv|control_unit.sv|data_mem.sv|extend.sv|hazard_unit.sv|insruction_mem.sv|mux_3_1.sv|register_file.sv|stg1_new_fetch.sv|stg2_decode.sv|stg3_excute.sv|stg4_memory.sv|top_pipeline.sv|top_tb.sv|
+Z13 !s108 1774942525.000000
+Z14 !s107 top_tb.sv|top_pipeline.sv|stg4_memory.sv|stg3_excute.sv|stg2_decode.sv|stg1_new_fetch.sv|register_file.sv|mux_3_1.sv|insruction_mem.sv|hazard_unit.sv|extend.sv|data_mem.sv|control_unit.sv|alu.sv|PCTarget.sv|
+Z15 !s90 -reportprogress|300|PCTarget.sv|alu.sv|control_unit.sv|data_mem.sv|extend.sv|hazard_unit.sv|insruction_mem.sv|mux_3_1.sv|register_file.sv|stg1_new_fetch.sv|stg2_decode.sv|stg3_excute.sv|stg4_memory.sv|top_pipeline.sv|top_tb.sv|
 !i113 0
-Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
+Z16 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
 vcontrol_unit
-R3
-R4
+R7
+R8
 !i10b 1
 !s100 Wb:=23@_<kbnfMDYXU0J[3
 IkOAcOm6`<CRBW=`]?BL>Q1
 S1
-R1
-w1774717084
+R9
+w1774725494
 8control_unit.sv
 Fcontrol_unit.sv
-!i122 17
+!i122 23
 L0 1 179
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
+R13
+R14
+R15
+!i113 0
+R16
+R5
+vdata_mem
 R7
 R8
-R9
-!i113 0
-R10
-R2
-vdata_mem
-R3
-R4
 !i10b 1
 !s100 HMcY3Q7hGlAziXa<VTl;g2
 I;4Jh]hK[N;?TX33W9zjZ22
 S1
-R1
-w1773884836
+R9
+Z17 w1774725451
 8data_mem.sv
 Fdata_mem.sv
-!i122 17
+!i122 23
 L0 1 23
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
+R13
+R14
+R15
+!i113 0
+R16
+R5
+vdecode
 R7
 R8
-R9
-!i113 0
-R10
-R2
-vdecode
-R3
-R4
 !i10b 1
 !s100 6[:72@fk_Iej56]6jnGLV1
 I6?1e2UmzP63@9hfi`GTac2
 S1
-R1
-w1774724425
+R9
+R17
 8stg2_decode.sv
 Fstg2_decode.sv
-!i122 17
+!i122 23
 L0 1 132
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
+R13
+R14
+R15
+!i113 0
+R16
+R5
+vexcute
 R7
 R8
-R9
-!i113 0
-R10
-R2
-vexcute
-R3
-R4
 !i10b 1
 !s100 `C0`2O262@]7RFY[PJnfn0
 INg6P[Vbfn>4Eck9@dQlHL2
 S1
-R1
-w1774720468
+R9
+R17
 8stg3_excute.sv
 Fstg3_excute.sv
-!i122 17
-Z11 L0 1 73
-R5
-R6
+!i122 23
+Z18 L0 1 73
+R11
+R12
 r1
 !s85 0
 31
+R13
+R14
+R15
+!i113 0
+R16
+R5
+vextend
 R7
 R8
-R9
-!i113 0
-R10
-R2
-vextend
-R3
-R4
 !i10b 1
 !s100 6DHO5]WPi4CPBSLE7EeDK2
 ImIHXLVNUIH>M2g^TVam=^2
 S1
-R1
-w1774318123
+R9
+R17
 8extend.sv
 Fextend.sv
-!i122 17
+!i122 23
 L0 1 20
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
+R13
+R14
+R15
+!i113 0
+R16
+R5
+vfetch_stage
 R7
 R8
-R9
-!i113 0
-R10
-R2
-vfetch_stage
-R3
-R4
 !i10b 1
 !s100 Ej;E;FEZ2@R`SiQXJREHH2
 Il79:[DI4V:mModcEcYe351
 S1
-R1
-w1774563544
+R9
+R17
 8stg1_new_fetch.sv
 Fstg1_new_fetch.sv
-!i122 17
+!i122 23
 L0 1 50
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
+R13
+R14
+R15
+!i113 0
+R16
+R5
+vHazard_Unit
 R7
 R8
-R9
-!i113 0
-R10
-R2
-vHazard_Unit
-R3
-R4
 !i10b 1
 !s100 >eSC6M:>121YIUk]OPYI53
 I;JU5lgI1G^`2Wk5g1m<VW1
 S1
-R1
-w1774564416
+R9
+R17
 8hazard_unit.sv
 Fhazard_unit.sv
-!i122 17
-Z12 L0 1 42
-R5
-R6
+!i122 23
+R10
+R11
+R12
 r1
 !s85 0
 31
-R7
-R8
-R9
+R13
+R14
+R15
 !i113 0
-R10
-R2
+R16
+R5
 n@hazard_@unit
 vinstruction_mem
-R3
-R4
+R7
+R8
 !i10b 1
 !s100 MW34I01;bm[@oez1WAndH3
 ILRE5O3B^FEP:4mFC1MgeT1
 S1
-R1
-w1774559162
+R9
+Z19 w1774940889
 8insruction_mem.sv
 Finsruction_mem.sv
-!i122 17
+!i122 23
 L0 1 13
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
+R13
+R14
+R15
+!i113 0
+R16
+R5
+vmemory
 R7
 R8
-R9
-!i113 0
-R10
-R2
-vmemory
-R3
-R4
 !i10b 1
 !s100 AX6d_]3GmSTK1=_R`Wn1?3
 IXK:>>]:_>CiEBm^?VFLCO0
 S1
-R1
-w1774562593
+R9
+R19
 8stg4_memory.sv
 Fstg4_memory.sv
-!i122 17
+!i122 23
+R10
+R11
 R12
-R5
-R6
 r1
 !s85 0
 31
+R13
+R14
+R15
+!i113 0
+R16
+R5
+vmux3_1
 R7
 R8
-R9
-!i113 0
-R10
-R2
-vmux3_1
-R3
-R4
 !i10b 1
 !s100 IEfM1Ze7PFM^5_6NzHDj_3
 IXE22@ijf=k6G;VX?1jIeS3
 S1
-R1
-w1774561854
+R9
+R17
 8mux_3_1.sv
 Fmux_3_1.sv
-!i122 17
+!i122 23
 L0 1 17
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
+R13
+R14
+R15
+!i113 0
+R16
+R5
+vPCTarget
 R7
 R8
-R9
-!i113 0
-R10
-R2
-vPCTarget
-R3
-R4
 !i10b 1
 !s100 mFC;UNZYa2OBI@ZAkbmkB0
 IdRCIUBZ_YRNN;LO4EicI;3
 S1
-R1
-w1773896399
+R9
+R17
 8PCTarget.sv
 FPCTarget.sv
-!i122 17
+!i122 23
 L0 1 11
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
-R7
-R8
-R9
+R13
+R14
+R15
 !i113 0
-R10
-R2
+R16
+R5
 n@p@c@target
 vregister_file
-R3
-R4
+R7
+R8
 !i10b 1
 !s100 S>hQ=_][VckRhTd11_aM11
 IZS5g5^9mU15Fbc=jD>mCj3
 S1
-R1
-w1774324109
+R9
+R17
 8register_file.sv
 Fregister_file.sv
-!i122 17
+!i122 23
 L0 1 21
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
+R13
+R14
+R15
+!i113 0
+R16
+R5
+vtop_pipeline
 R7
 R8
-R9
-!i113 0
-R10
-R2
-vtop_pipeline
-R3
-R4
 !i10b 1
-!s100 n]T2W7@`AEl8`BBIYDG`32
-Ijd1]]48ZkJ5a`[3<0YVXA2
+!s100 92`mO4A9`Qd1]?PTf;Ljn1
+IVoJQzLzjL<;^V`KFkA^D=1
 S1
-R1
-w1774724400
+R9
+w1774940993
 8top_pipeline.sv
 Ftop_pipeline.sv
-!i122 17
-L0 1 111
-R5
-R6
+!i122 23
+L0 1 108
+R11
+R12
 r1
 !s85 0
 31
+R13
+R14
+R15
+!i113 0
+R16
+R5
+vtop_tb
 R7
 R8
-R9
-!i113 0
-R10
-R2
-vtop_tb
-R3
-R4
 !i10b 1
 !s100 ljKhJ5?YQ[``cIz1GRhQO2
 I6?NJb@Z:J5mQ2CGPQ@FA@3
 S1
-R1
-w1774724285
+R9
+w1774725512
 8top_tb.sv
 Ftop_tb.sv
-!i122 17
+!i122 23
+R18
 R11
-R5
-R6
+R12
 r1
 !s85 0
 31
-R7
-R8
-R9
+R13
+R14
+R15
 !i113 0
-R10
-R2
+R16
+R5

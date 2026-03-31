@@ -20,13 +20,10 @@ always @(*) begin
         end
         
         3'b001: begin
-            if(!funct7_5) begin
-                result = src_a >> src_b;                 // SRL
-            end
-            else begin
-
-                result = {src_a[31], src_a >> src_b};   // SRA
-            end
+            if(!funct7_5) 
+                result = src_a >> src_b[4:0];               // SRL (Logical)
+            else 
+                result = $signed(src_a) >>> src_b[4:0];     // SRA (Arithmetic)
         end
         3'b010: result = src_a & src_b;                // AND
         3'b011: result = src_a | src_b;              // OR
