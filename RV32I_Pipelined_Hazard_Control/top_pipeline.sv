@@ -62,6 +62,8 @@ logic StallF;
 
 logic [4:0] Rs1D, Rs2D;
 
+logic funct7_5E;
+
 Hazard_Unit hu(.Rs1E(Rs1E), .Rs2E(Rs2E), .RdM(RdM), .RdW(RdW), .RegWriteM(RegWriteM), .RegWriteW(RegWriteW), .ResultSrcE_0(ResultSrcE[0]), 
                 .RdE(RdE), .Rs1D(Rs1D), .Rs2D(Rs1D), .PCSrcE(PCSrcE), .FlushE(FlushE), .StallD(StallD), .StallF(StallF), .ForwardAE(ForwardAE), .ForwardBE(ForwardBE), .FlushD(FlushD));
 
@@ -73,7 +75,6 @@ fetch_stage new_fet(.clk(clk), .rst_n(rst_n), .PCTargetE(PCTargetE), .PCSrcE(PCS
 
 
 decode decode_keda_keda(.clk(clk), .rst_n(rst_n),.instrD(instrD), .PCPlus4D(PCPlus4D), .PCD(PCD), .RegWriteW(RegWriteW), .ResultW(result),
-
          .RdW(RdW), .PCE(PCE), .PCPlus4E(PCPlus4E), .RegWriteE(RegWriteE), .ResultSrcE(ResultSrcE), .MemWriteE(MemWriteE),
          .jumpE(jumpE), .BranchE(BranchE), .ALUControlE(ALUControlE), .ALUSrcE(ALUSrcE), .RD1E(RD1E), 
          .RD2E(RD2E), .ImmExtE(ImmExtE), .RdE(RdE),
@@ -81,7 +82,8 @@ decode decode_keda_keda(.clk(clk), .rst_n(rst_n),.instrD(instrD), .PCPlus4D(PCPl
          .Rs1E(Rs1E),
          .Rs2E(Rs2E),
          .Rs1D(Rs1D),
-         .Rs2D(Rs2D));
+         .Rs2D(Rs2D),
+         .funct7_5E(funct7_5E));
 
 
 mux3_1 mux_alu_1(.A(RD1E), .B(result), .C(ALUResultM), .Sel(ForwardAE), .out(mux_R1_out));
@@ -89,6 +91,7 @@ mux3_1 mux_alu_2(.A(RD2E), .B(result), .C(ALUResultM), .Sel(ForwardBE), .out(mux
 
 excute excute_kda_kda( .clk(clk), .PCE(PCE), .PCPlus4E(PCPlus4E), .RegWriteE(RegWriteE), .ResultSrcE(ResultSrcE), 
                         .MemWriteE(MemWriteE), .jumpE(jumpE), .BranchE(BranchE), .ALUControlE(ALUControlE), .ALUSrcE(ALUSrcE), 
+                        .funct7_5E(funct7_5E),
                         .RD1E(mux_R1_out), .RD2E(mux_R2_out), .ImmExtE(ImmExtE), .RdE(RdE), .RegWriteM(RegWriteM), 
                         .ResultSrcM(ResultSrcM), .MemWriteM(MemWriteM), .ALUResultM(ALUResultM), .WriteDataM(WriteDataM), .RdM(RdM), .PCTargetE(PCTargetE), .PCPlus4M(PCPlus4M),
                         .ZeroE(ZeroE));
