@@ -11,6 +11,7 @@ R0
 R0
 R0
 R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -31,38 +32,39 @@ n@_opt
 Z6 OL;O;2021.1;73
 R1
 T_opt1
-!s110 1774942530
-VcG<CX@eL=]lcMzn9i=1Km0
+!s110 1774946723
+VdYPggC1Kc`;LVS;3<>fTe1
 R2
-=1-fc3497dde9b4-69cb7942-128-4f6c
+=1-fc3497dde9b4-69cb89a1-33d-2bd4
 R3
 R4
 R5
 n@_opt1
 R6
+R1
 valu
 Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z8 !s110 1774942525
+Z8 !s110 1774948155
 !i10b 1
-!s100 TlPI?S[<N6;T=eF>[hgCi3
-ITJF3Z<OZ[M^:EFD1Wfo<?2
+!s100 ]2dOcKCNBcn_A`PhSn0ha3
+IS=FI?72FYMaQY468MD;nR2
 S1
 Z9 dC:/Users/Mahmoud Magdy/Desktop/GP/RV32I/RV32I_Pipelined_Hazard_Control
-w1774942509
+w1774942861
 8alu.sv
 Falu.sv
-!i122 23
-Z10 L0 1 42
-Z11 VDg1SIo80bB@j0V0VzS_@n1
-Z12 OL;L;2021.1;73
+!i122 30
+L0 1 40
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+Z11 OL;L;2021.1;73
 r1
 !s85 0
 31
-Z13 !s108 1774942525.000000
-Z14 !s107 top_tb.sv|top_pipeline.sv|stg4_memory.sv|stg3_excute.sv|stg2_decode.sv|stg1_new_fetch.sv|register_file.sv|mux_3_1.sv|insruction_mem.sv|hazard_unit.sv|extend.sv|data_mem.sv|control_unit.sv|alu.sv|PCTarget.sv|
-Z15 !s90 -reportprogress|300|PCTarget.sv|alu.sv|control_unit.sv|data_mem.sv|extend.sv|hazard_unit.sv|insruction_mem.sv|mux_3_1.sv|register_file.sv|stg1_new_fetch.sv|stg2_decode.sv|stg3_excute.sv|stg4_memory.sv|top_pipeline.sv|top_tb.sv|
+Z12 !s108 1774948155.000000
+!s107 top_tb.sv|top_pipeline.sv|stg4_memory.sv|stg3_excute.sv|stg2_decode.sv|stg1_new_fetch.sv|register_file.sv|mux_3_1.sv|insruction_mem.sv|hazard_unit.sv|extend.sv|data_mem.sv|control_unit.sv|alu.sv|PCTarget.sv|
+Z13 !s90 -reportprogress|300|PCTarget.sv|alu.sv|control_unit.sv|data_mem.sv|extend.sv|hazard_unit.sv|insruction_mem.sv|mux_3_1.sv|register_file.sv|stg1_new_fetch.sv|stg2_decode.sv|stg3_excute.sv|stg4_memory.sv|top_pipeline.sv|top_tb.sv|
 !i113 0
-Z16 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R5
 vcontrol_unit
 R7
@@ -75,90 +77,90 @@ R9
 w1774725494
 8control_unit.sv
 Fcontrol_unit.sv
-!i122 23
+!i122 30
 L0 1 179
+R10
 R11
-R12
 r1
 !s85 0
 31
+R12
+Z15 !s107 top_tb.sv|top_pipeline.sv|stg4_memory.sv|stg3_excute.sv|stg2_decode.sv|stg1_new_fetch.sv|register_file.sv|mux_3_1.sv|insruction_mem.sv|hazard_unit.sv|extend.sv|data_mem.sv|control_unit.sv|alu.sv|PCTarget.sv|
 R13
-R14
-R15
 !i113 0
-R16
+R14
 R5
 vdata_mem
 R7
 R8
 !i10b 1
-!s100 HMcY3Q7hGlAziXa<VTl;g2
-I;4Jh]hK[N;?TX33W9zjZ22
+!s100 Q5:Gg;FcUNgCckJz?zRVD3
+ITdEUmh4ClcLJW8FaL4]A_1
 S1
 R9
-Z17 w1774725451
+w1774946706
 8data_mem.sv
 Fdata_mem.sv
-!i122 23
-L0 1 23
+!i122 30
+L0 1 33
+R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 vdecode
 R7
 R8
 !i10b 1
-!s100 6[:72@fk_Iej56]6jnGLV1
-I6?1e2UmzP63@9hfi`GTac2
+!s100 >24GJEkoDKbYKKoIiHU0U0
+IPf2=9>TLD3887eB?oj6WV2
 S1
 R9
-R17
+w1774945969
 8stg2_decode.sv
 Fstg2_decode.sv
-!i122 23
-L0 1 132
+!i122 30
+L0 1 135
+R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 vexcute
 R7
 R8
 !i10b 1
-!s100 `C0`2O262@]7RFY[PJnfn0
-INg6P[Vbfn>4Eck9@dQlHL2
+!s100 S1h7^KMRO<]bG9_;`zY]S3
+Ii^W2l6RboGY7OYBE2o]M80
 S1
 R9
-R17
+w1774946043
 8stg3_excute.sv
 Fstg3_excute.sv
-!i122 23
-Z18 L0 1 73
+!i122 30
+L0 1 76
+R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 vextend
 R7
@@ -168,21 +170,21 @@ R8
 ImIHXLVNUIH>M2g^TVam=^2
 S1
 R9
-R17
+Z16 w1774725451
 8extend.sv
 Fextend.sv
-!i122 23
-L0 1 20
+!i122 30
+Z17 L0 1 20
+R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 vfetch_stage
 R7
@@ -192,21 +194,21 @@ R8
 Il79:[DI4V:mModcEcYe351
 S1
 R9
-R17
+R16
 8stg1_new_fetch.sv
 Fstg1_new_fetch.sv
-!i122 23
+!i122 30
 L0 1 50
+R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 vHazard_Unit
 R7
@@ -216,21 +218,21 @@ R8
 I;JU5lgI1G^`2Wk5g1m<VW1
 S1
 R9
-R17
+R16
 8hazard_unit.sv
 Fhazard_unit.sv
-!i122 23
+!i122 30
+L0 1 42
 R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 n@hazard_@unit
 vinstruction_mem
@@ -241,45 +243,45 @@ R8
 ILRE5O3B^FEP:4mFC1MgeT1
 S1
 R9
-Z19 w1774940889
+w1774940889
 8insruction_mem.sv
 Finsruction_mem.sv
-!i122 23
+!i122 30
 L0 1 13
+R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 vmemory
 R7
 R8
 !i10b 1
-!s100 AX6d_]3GmSTK1=_R`Wn1?3
-IXK:>>]:_>CiEBm^?VFLCO0
+!s100 <W]1YTk^ehNg?G2gCa21h3
+IZ::_=iJj99dRT?YmM4kl`1
 S1
 R9
-R19
+w1774946088
 8stg4_memory.sv
 Fstg4_memory.sv
-!i122 23
+!i122 30
+L0 1 44
 R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 vmux3_1
 R7
@@ -289,21 +291,21 @@ R8
 IXE22@ijf=k6G;VX?1jIeS3
 S1
 R9
-R17
+R16
 8mux_3_1.sv
 Fmux_3_1.sv
-!i122 23
+!i122 30
 L0 1 17
+R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 vPCTarget
 R7
@@ -313,70 +315,70 @@ R8
 IdRCIUBZ_YRNN;LO4EicI;3
 S1
 R9
-R17
+R16
 8PCTarget.sv
 FPCTarget.sv
-!i122 23
+!i122 30
 L0 1 11
+R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 n@p@c@target
 vregister_file
 R7
 R8
 !i10b 1
-!s100 S>hQ=_][VckRhTd11_aM11
-IZS5g5^9mU15Fbc=jD>mCj3
+!s100 Yc?bBne5R4GghaNg^=DTd2
+IGB>FLF>>z8;01[Q1N5PX<0
 S1
 R9
-R17
+w1774943860
 8register_file.sv
 Fregister_file.sv
-!i122 23
-L0 1 21
+!i122 30
+R17
+R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 vtop_pipeline
 R7
 R8
 !i10b 1
-!s100 92`mO4A9`Qd1]?PTf;Ljn1
-IVoJQzLzjL<;^V`KFkA^D=1
+!s100 =0P3R]^Z3HIM<cYEik3Sf3
+IM@Xb=V;EVi9Zd>YXGd`063
 S1
 R9
-w1774940993
+w1774946396
 8top_pipeline.sv
 Ftop_pipeline.sv
-!i122 23
-L0 1 108
+!i122 30
+L0 1 110
+R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5
 vtop_tb
 R7
@@ -389,16 +391,16 @@ R9
 w1774725512
 8top_tb.sv
 Ftop_tb.sv
-!i122 23
-R18
+!i122 30
+L0 1 73
+R10
 R11
-R12
 r1
 !s85 0
 31
-R13
-R14
+R12
 R15
+R13
 !i113 0
-R16
+R14
 R5

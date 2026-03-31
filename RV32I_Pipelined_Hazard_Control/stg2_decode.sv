@@ -24,7 +24,8 @@ module decode (
     output logic [4:0] Rs2E, // Added for the hazard unit
     output logic [4:0] Rs1D, // Added for the hazard unit
     output logic [4:0] Rs2D, // Added for the hazard unit
-    output logic funct7_5E
+    output logic funct7_5E,
+    output logic [2:0] funct3E
 );
 
     logic RegWriteD;
@@ -107,6 +108,7 @@ module decode (
             RdE <= 0;
             Rs1E <= 0;
             Rs2E <= 0;
+            funct3E <= 0;
         end
         else begin
             PCE <= PCD; 
@@ -125,6 +127,7 @@ module decode (
             Rs1E <= Rs1D;
             Rs2E <= Rs2D;
             funct7_5E <= funct7_5;
+            funct3E <= instrD[14:12];
         end
     end
 

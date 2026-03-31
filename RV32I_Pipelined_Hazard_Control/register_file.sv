@@ -13,7 +13,6 @@ assign RD2 = (A2 != 0)? registers[A2]: 0;
 
 always @(negedge clk) begin
     if (w_en)begin
-       
         registers[A3] <= WD3;
     end
 end

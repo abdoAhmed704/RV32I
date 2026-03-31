@@ -14,6 +14,7 @@ module excute (
     input [31:0] ImmExtE,
     input [4:0] RdE,
     input funct7_5E,
+    input [2:0] funct3E,
     
     output reg RegWriteM,
     output reg [1:0] ResultSrcM,
@@ -23,7 +24,8 @@ module excute (
     output reg [4:0] RdM,
     output reg [31:0] PCTargetE,
     output reg [31:0] PCPlus4M,
-    output ZeroE
+    output ZeroE,
+    output reg [2:0] funct3M
 
 );
 
@@ -67,6 +69,7 @@ module excute (
         WriteDataM <= WriteDataE; // Pass data to be written to memory to memory stage
         RdM <= RdE; // Pass destination register address to memory stage
         PCPlus4M <= PCPlus4E; // Pass PC + 4 to memory stage
+        funct3M <= funct3E;
     end
 
 

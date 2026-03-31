@@ -7,6 +7,7 @@ module memory(
     input [31:0] WriteDataM,
     input [4:0] RdM,
     input [31:0] PCPlus4M,
+    input [2:0] funct3M,
     output reg RegWriteW,
     output reg [1:0] ResultSrcW,
     output reg [4:0] RdW,
@@ -24,7 +25,8 @@ module memory(
         .WriteEnable(MemWriteM), // Write enable signal from memory stage
         .Address(ALUResultM), // Address for memory access (ALU result)
         .WriteData(WriteDataM), // Data to write to memory (from execute stage)
-        .ReadData(ReadDataM) // Data read from memory (to be used in write-back stage)
+        .ReadData(ReadDataM), // Data read from memory (to be used in write-back stage)
+        .funct3(funct3M)
     );
 
     // Pipeline register for the memory stage to write-back stage
