@@ -15,6 +15,7 @@ module excute (
     input [4:0] RdE,
     input funct7_5E,
     input [2:0] funct3E,
+    input ImmPassE,
     
     output reg RegWriteM,
     output reg [1:0] ResultSrcM,
@@ -65,11 +66,15 @@ module excute (
         RegWriteM <= RegWriteE; // Pass register write enable signal to memory stage
         ResultSrcM <= ResultSrcE; // Pass ALU result source control signal to memory stage
         MemWriteM <= MemWriteE; // Pass memory write enable signal to memory stage
-        ALUResultM <= ALUResultE; // Pass ALU result to memory stage
         WriteDataM <= WriteDataE; // Pass data to be written to memory to memory stage
         RdM <= RdE; // Pass destination register address to memory stage
         PCPlus4M <= PCPlus4E; // Pass PC + 4 to memory stage
         funct3M <= funct3E;
+        if (ImmPassE) begin
+            ALUResultM <= ImmExtE; // Pass the immediate value directly to memory stage for LUI and AUIPC instructions
+        end else begin
+            ALUResultM <= ALUResultE; // Pass ALU result to memory stage for other instructions
+        end
     end
 
 

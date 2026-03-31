@@ -9,7 +9,8 @@ module control_unit (
     output logic RegWrite, // Control signal for register write enable
     output logic MemWrite, // Control signal for memory write enable
     output logic jump,
-    output logic Branch
+    output logic Branch,
+    output logic ImmPass
 );
 
     reg [1:0] ALUOp; // Control signal for ALU Decoder
@@ -36,6 +37,7 @@ module control_unit (
                 ALUOp = 2'b10; // Default to R-type operation
                 Branch = 0;
                 jump=0;
+                ImmPass=0;
             end
             7'b0010011: begin // I-type instructions (ADDI)
                 ResultSrc = 2'b00; // Default to ALU result
@@ -46,6 +48,7 @@ module control_unit (
                 ALUOp = 2'b10; // Set ALU operation type for I-type instructions
                 Branch = 0;
                 jump=0;
+                ImmPass=0;
             end
             7'b1100011: begin // B Type - beq instruction
                 ResultSrc = 2'bxx; // Default to ALU result
@@ -56,6 +59,7 @@ module control_unit (
                 ALUOp = 2'b01; // Set ALU operation type for branch instructions
                 Branch = 1; 
                 jump = 0;
+                ImmPass=0;
             end
             7'b0000011: begin // Load instructions ( LW)
                 ALUSrc = 1; // Use immediate value for address calculation
@@ -66,6 +70,7 @@ module control_unit (
                 ResultSrc = 2'b01; // Use memory data as result for load instructions
                 Branch = 0;
                 jump=0;
+                ImmPass=0;
 
             end
             7'b0100011: begin // Store instructions (SW)
@@ -77,6 +82,8 @@ module control_unit (
                 ResultSrc = 2'bxx; // Use ALU result for store instructions
                 Branch = 0;
                 jump=0;
+                ImmPass=0;
+
             end
             7'b1101111: begin // JAL instruction
                 ALUSrc = 1'bx; // Use register source for address calculation
@@ -87,6 +94,7 @@ module control_unit (
                 ResultSrc = 2'b10; // Use memory data as result for JAL instruction
                 Branch = 0;
                 jump=0;
+                ImmPass=0;
             end
             7'b1100111: begin // JALR instruction
                 ALUSrc = 1; // Use immediate value for address calculation
@@ -97,26 +105,29 @@ module control_unit (
                 ResultSrc = 2'b10; // Use memory data as result for JALR instruction
                 Branch = 0;
                 jump=1;
+                ImmPass=0;
             end
             7'b0110111: begin // LUI instruction
                 ALUSrc = 1; // Use immediate value for address calculation
-                ImmSrc = 2'b00; // Use I-type immediate for LUI instruction
+                ImmSrc = 2'b11; // Use U-type immediate for LUI instruction
                 RegWrite = 1; // Enable register write for LUI instruction
                 MemWrite = 0; // Disable memory write for LUI instruction
-                ALUOp = 2'bxx; // Set ALU operation type for LUI instruction
-                ResultSrc = 2'b11; // Use memory data as result for LUI instruction
+                ALUOp = 2'b00; // Set ALU operation type for LUI instruction
+                ResultSrc = 2'b00; // Use memory data as result for LUI instruction
                 Branch = 0;
                 jump=0;
+                ImmPass=1;
             end
             7'b0010111: begin // AUIPC instruction
                 ALUSrc = 1; // Use immediate value for address calculation
-                ImmSrc = 2'b00; // Use I-type immediate for AUIPC instruction
+                ImmSrc = 2'b11; // Use U-type immediate for AUIPC instruction
                 RegWrite = 1; // Enable register write for AUIPC instruction
                 MemWrite = 0; // Disable memory write for AUIPC instruction
-                ALUOp = 2'bxx; // Set ALU operation type for AUIPC instruction
+                ALUOp = 2'b00; // Set ALU operation type for AUIPC instruction
                 ResultSrc = 2'b11; // Use memory data as result for AUIPC instruction
                 Branch = 0;
                 jump=0;
+                ImmPass=1;
             end
             7'b1110011: begin // ECALL instruction ane EBREAK instruction
                 ALUSrc = 1'bx; // Don't care for ECALL
@@ -127,6 +138,7 @@ module control_unit (
                 ResultSrc = 2'bxx; // Don't care for ECALL instruction
                 Branch = 0;
                 jump=0;
+                ImmPass=0;
             end
             7'b0001111: begin
                 // fence instruction
@@ -134,7 +146,7 @@ module control_unit (
             default: begin 
                 Branch = 0;
                 jump=0;
-
+                ImmPass=0;
             end
         endcase
         

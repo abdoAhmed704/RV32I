@@ -25,7 +25,8 @@ module decode (
     output logic [4:0] Rs1D, // Added for the hazard unit
     output logic [4:0] Rs2D, // Added for the hazard unit
     output logic funct7_5E,
-    output logic [2:0] funct3E
+    output logic [2:0] funct3E,
+    output logic ImmPassE // Added for the control unit to pass the immediate value to the execute stage for LUI and AUIPC instructions
 );
 
     logic RegWriteD;
@@ -40,6 +41,7 @@ module decode (
     logic [31:0] RD2;
     logic [31:0] ImmExtD;
     logic [4:0] RdD;
+    logic ImmPassD; // Added for the control unit to pass the immediate value to the execute stage for LUI and AUIPC instructions
 
     logic funct7_5;
 
@@ -74,7 +76,9 @@ module decode (
         .RegWrite(RegWriteD), // Control signal for register write enable
         .MemWrite(MemWriteD), // Control signal for memory write enable
         .jump(jumpD),
-        .Branch(BranchD)
+        .Branch(BranchD),
+        .ImmPass(ImmPassD)
+
     );
 
 
@@ -109,6 +113,7 @@ module decode (
             Rs1E <= 0;
             Rs2E <= 0;
             funct3E <= 0;
+            ImmPassE <= 0;
         end
         else begin
             PCE <= PCD; 
@@ -128,6 +133,7 @@ module decode (
             Rs2E <= Rs2D;
             funct7_5E <= funct7_5;
             funct3E <= instrD[14:12];
+            ImmPassE <= ImmPassD;
         end
     end
 

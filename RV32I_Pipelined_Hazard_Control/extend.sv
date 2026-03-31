@@ -11,8 +11,9 @@ always @(*) begin
     2'b10: begin 
         imm_extend = {{19{Instr[31]}}, Instr[31], Instr[7], Instr[30:25], Instr[11:8], 1'b0};
     end
-    default:
-        imm_extend = 32'b0;
+    2'b11: begin 
+        imm_extend = {{Instr[31:12], 12'b0}}; // U Type
+    end
     endcase
 end
 
