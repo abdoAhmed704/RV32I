@@ -11,11 +11,9 @@ always @(*) begin
         3'b000: begin
             if(!funct7_5) begin
                 result = src_a + src_b;                  // ADD
-                $display("fuck======================================");
             end
             else begin
                 result = src_a - src_b;                 // SUB
-                $display("mahmoud ==================================");
             end
         end
         
